@@ -7,6 +7,7 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoContext } from "../TodoContext";
 import { Modal } from "../Modal";
 import { TodoForm } from "../TodoForm";
+import { TodoListLoader } from "../TodoList/TodoListLoader";
 
 function AppUI(){
     const {error,
@@ -33,7 +34,7 @@ function AppUI(){
 
             {error && <p>Error!!, contact with administrator</p> }
 
-            {loading && <p>We are loading, wait please</p> }
+            {loading && < TodoListLoader /> }
             {(!loading && !searchedTodos.length) && <p>Create you first todo</p>}
 
 
